@@ -31,11 +31,12 @@ def mandelbrot(h, w, x=-0.5, y=0, z=1, mi=100):
 try:
  a1 = sys.argv[1]
  a2 = sys.argv[2]
+ outfile = sys.argv[3]
 except* IndexError:
- print('you need args')
+ print('need 2 input arguments and 1 output filename')
  sys.exit(1)
 
-plt.imsave('out.jpg', mandelbrot(int(sys.argv[1]), int(sys.argv[2])), cmap='magma')
-m = mahotas.imread('out.jpg')
+plt.imsave(outfile, mandelbrot(int(sys.argv[1]), int(sys.argv[2])), cmap='magma')
+m = mahotas.imread(outfile)
 pylab.imshow(m)
 pylab.show()
