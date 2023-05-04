@@ -1,0 +1,9 @@
+name: bmi212
+channels:
+  - defaults
+dependencies:
+  - python=3.11
+  - mahotas
+  - matplotlib
+  - numpy
+prefix: /home/alexdloia/miniconda3/envs/bmi212
